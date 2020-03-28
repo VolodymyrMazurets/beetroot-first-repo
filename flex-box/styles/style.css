@@ -8,4 +8,34 @@ html, body {
 }
 body {
     font-size: 100%;
+    background-color: rgb(248, 218, 120);
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 32px;
+}
+.main__block {
+    min-height: 100px;
+    border-radius: 10px;
+    border: 1px solid black;
+    flex-basis: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main__block--red {
+    background-color: rgba(199, 36, 36, 0.931);
+}
+.main__block--green {
+    background-color: rgba(104, 200, 49, 0.931);
+    min-height: 150px;
+    
+}
+.main__block--violet {
+    background-color: rgba(153, 36, 199, 0.931);
+    min-height: 75px;
+    
 }
