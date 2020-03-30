@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Proxima Nova Regular";
+  src: url("../assets/fonts/ProximaNova-Regular.eot");
+  src: url("../assets/fonts/ProximaNova-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/ProximaNova-Regular.woff") format("woff"),
+    url("../assets/fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url("../assets/fonts/ProximaNova-Bold.eot");
+  src: url("../assets/fonts/Prova-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/ProximaNova-Bold.woff") format("woff"),
+    url("../assets/fonts/ProximaNova-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+:root {
+  --icon-color: #1275b9;
+  --black: #000000;
+  --white: #ffffff;
+  --grey-color: #9d9d9d;
+
+  --regular-font: "Proxima Nova Regular", serif;
+  --bold-font: "Proxima Nova Bold", serif;
+
+  --text-size: 14px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 100%;
+}
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 0 66px;
+  font-size: var(--text-size);
+}
+.services__list {
+  list-style: none;
+  display: flex;
+  max-width: 80%;
+}
+.services__list-item {
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services__list-item:last-child {
+  margin-right: 0;
+}
+.services__icon-wrapper {
+  --size: 66px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: 2px solid var(--icon-color);
+  background-color: var(--icon-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: background-color .2s ease;
+  cursor: pointer;
+}
+.services__icon-wrapper:hover {
+    background-color: var(--white);
+}
+.services__icon-wrapper:hover > svg {
+    fill: var(--icon-color);
+}
+.services__icon-wrapper_yellow {
+    border-color: yellow;
+    background-color: yellow;
+}
+.services__icon-wrapper_green {
+    border-color: green;
+    background-color: green;
+}
+.services__icon {
+  --size: 30px;
+  width: var(--size);
+  height: var(--size);
+  fill: var(--white);
+  transition: fill .2s ease;
+}
+.services__list-title {
+  font-family: var(--bold-font);
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.services__list-text {
+    font-family: var(--regular-font);
+    color: var(--grey-color);
+    text-align: center;
+}
